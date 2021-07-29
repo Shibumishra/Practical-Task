@@ -14,7 +14,27 @@ import * as Yup from 'yup';
 import { FormHelperText } from '@material-ui/core';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { People } from '@material-ui/icons';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+      display: 'block',
+      marginTop: theme.spacing(2),
+    },
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+  }));
+
+
+function onChange(date, dateString) {
+    console.log(date, dateString);
+}
 
 const SignUp = (props) => {
     const [selsectDate, setSelsectDate] = useState(null)
@@ -33,7 +53,7 @@ const SignUp = (props) => {
         birthDate: null,
         termAndConditions: false
     }
-  
+
     const validationSchema = Yup.object().shape({
         name: Yup.string().min(3, "It's too short").required("Required"),
         email: Yup.string().email("Enter valid email").required("Redured"),
@@ -85,9 +105,64 @@ const SignUp = (props) => {
                                 placeholder="Enter you email" helperText={<ErrorMessage name="email" />} />
 
                             <FormLabel component="legend">About</FormLabel>
-                            <TextareaAutosize aria-label="minimum height" minRows={3}  />
+                            <TextareaAutosize aria-label="minimum height" minRows={3} />
 
-                            <FormControl component="fieldset" style={{ marginTop: "8px" }}>
+                            {/* Experience */}
+                            <FormLabel component="legend" style={{ marginTop: "25px" }}>Experience</FormLabel>
+                            <Field as={TextField} label='Company Name' name="Company Name" fullWidth
+                                placeholder="Company Name" type="text" helperText={<ErrorMessage name="Company Name" />} />
+                            <Field as={TextField} label='Job Post' name="Job Post" fullWidth
+                                placeholder="Job Post" type="text" helperText={<ErrorMessage name="Job Post" />} />
+                            <Field as={TextField} label='Location' name="Location" fullWidth
+                                placeholder="Location" type="text" helperText={<ErrorMessage name="Location" />} />
+                            <Field as={TextField} label='Description' name="Description" fullWidth
+                                placeholder="Description" type="text" helperText={<ErrorMessage name="Description" />} />
+                            <Field as={TextField} label='isCurrent' name="isCurrent" fullWidth
+                                placeholder="isCurrent" type="text" helperText={<ErrorMessage name="isCurrent" />} />
+                            <TextField
+                                id="date"
+                                label="Select Date"
+                                type="date"
+                                defaultValue="Select Date"
+
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                            />
+                            {/* Education */}
+                            <FormLabel component="legend" style={{ marginTop: "25px" }}>Experience</FormLabel>
+                            <Field as={TextField} label='Name' name="name" fullWidth
+                                placeholder="Enter you name" type="text" helperText={<ErrorMessage name="name" />} />
+                            <Field as={TextField} label='Location' name="Location" fullWidth
+                                placeholder="Location" type="text" helperText={<ErrorMessage name="Location" />} />
+                            <FormLabel component="legend">About</FormLabel>
+                            <TextareaAutosize aria-label="minimum height" minRows={3} />
+                            <TextField
+                                id="date"
+                                label="Select Year"
+                                type="date"
+                                defaultValue="Select Date"
+
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                            />
+                            {/* Languages */}
+                            <InputLabel id="demo-controlled-open-select-label">Languages</InputLabel>
+                            <Select
+                                labelId="demo-controlled-open-select-label"
+                                id="demo-controlled-open-select"
+                                value="Languages"
+                            >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={10}>Eng</MenuItem>
+                                <MenuItem value={20}>Hin</MenuItem>
+                                <MenuItem value={30}>Ban</MenuItem>
+                            </Select>
+
+                            <FormControl component="fieldset" style={{ marginTop: "28px" }}>
                                 <FormLabel component="legend">Gender</FormLabel>
                                 <Field as={RadioGroup} aria-label="gender" name="gender" style={{ display: 'initial' }}>
                                     <FormControlLabel value="female" control={<Radio />} label="Female" />
