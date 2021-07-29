@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Practical-Task/static/css/main.bc0a485f.chunk.css",
+    "main.js": "/Practical-Task/static/js/main.f8ac555d.chunk.js",
+    "main.js.map": "/Practical-Task/static/js/main.f8ac555d.chunk.js.map",
+    "runtime-main.js": "/Practical-Task/static/js/runtime-main.311400c0.js",
+    "runtime-main.js.map": "/Practical-Task/static/js/runtime-main.311400c0.js.map",
+    "static/css/2.5b5b985f.chunk.css": "/Practical-Task/static/css/2.5b5b985f.chunk.css",
+    "static/js/2.07554195.chunk.js": "/Practical-Task/static/js/2.07554195.chunk.js",
+    "static/js/2.07554195.chunk.js.map": "/Practical-Task/static/js/2.07554195.chunk.js.map",
+    "static/js/3.a5235e4d.chunk.js": "/Practical-Task/static/js/3.a5235e4d.chunk.js",
+    "static/js/3.a5235e4d.chunk.js.map": "/Practical-Task/static/js/3.a5235e4d.chunk.js.map",
+    "index.html": "/Practical-Task/index.html",
+    "static/css/2.5b5b985f.chunk.css.map": "/Practical-Task/static/css/2.5b5b985f.chunk.css.map",
+    "static/css/main.bc0a485f.chunk.css.map": "/Practical-Task/static/css/main.bc0a485f.chunk.css.map",
+    "static/js/2.07554195.chunk.js.LICENSE.txt": "/Practical-Task/static/js/2.07554195.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.311400c0.js",
+    "static/css/2.5b5b985f.chunk.css",
+    "static/js/2.07554195.chunk.js",
+    "static/css/main.bc0a485f.chunk.css",
+    "static/js/main.f8ac555d.chunk.js"
+  ]
+}
